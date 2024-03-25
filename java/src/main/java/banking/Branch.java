@@ -1,5 +1,7 @@
 package banking;
 
+import java.math.BigDecimal;
+
 class Branch {
     private final String name;
     private final String branchManager;
@@ -18,7 +20,7 @@ class Branch {
         return branchManager;
     }
 
-    public PersonalAccountsManager getPersonalAccounts() {
-        return personalAccounts;
+    boolean withdraw(String customerName, BigDecimal cashAmount) {
+        return personalAccounts.withdraw(customerName, cashAmount);
     }
 }
